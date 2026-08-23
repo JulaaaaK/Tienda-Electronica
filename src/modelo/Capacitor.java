@@ -5,13 +5,14 @@ public class Capacitor extends Producto {
     private double capacitancia; // En Faradios o Microfaradios
     private double voltajeMaximo;
 
-    public Capacitor(String sku, String nombre, String especificacion, double stockMinimo, double capacitancia, double voltajeMaximo) {
+    //Constructor del Capacitor
+    public Capacitor(String sku, String nombre, String especificacion, double stockMinimo, double capacitancia, double voltaje) {
         super(sku, nombre, especificacion, stockMinimo);
         this.capacitancia = capacitancia;
-        this.voltajeMaximo = voltajeMaximo;
+        this.voltajeMaximo = voltaje;
     }
 
-    @Override
+    @Override //Clase hija, reemplaza el método abstracto de la clase padre Producto
     public String mostrarDetalle() {
         return String.format("[CAPACITOR] SKU: %s | Nombre: %s | Cap: %.2f uF | Voltaje Máx: %.1fV | Espec: %s",
                 getSku(), getNombre(), capacitancia, voltajeMaximo, getEspecificacion());

@@ -4,7 +4,7 @@ import java.util.UUID;
 
 
 public abstract class Producto {
-    // Atributos privados (Encapsulamiento)
+    
     private UUID id;
     private String sku;
     private String nombre;
@@ -33,7 +33,7 @@ public abstract class Producto {
         return stockActual <= this.stockMinimo;
     }
 
-    /
+    
     public abstract String mostrarDetalle();
 
     

@@ -3,9 +3,10 @@ package modelo;
 
 public class Resistencia extends Producto {
     private double ohmios;
-    private double tolerancia; // Ej: 5.0 para 5%
+    private double tolerancia; 
 
-   
+
+   //Constructor de la Resistencia
     public Resistencia(String sku, String nombre, String especificacion, double stockMinimo, double ohmios, double tolerancia) {
         super(sku, nombre, especificacion, stockMinimo);
         this.ohmios = ohmios;

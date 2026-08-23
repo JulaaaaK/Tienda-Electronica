@@ -5,13 +5,14 @@ public class CircuitoIntegrado extends Producto {
     private String encapsulado;
     private int numeroPines;
 
-    public CircuitoIntegrado(String sku, String nombre, String especificacion, double stockMinimo, String encapsulado, int numeroPines) {
+    //Constructor del Circuito Integrado
+    public CircuitoIntegrado(String sku, String nombre, String especificacion, double stockMinimo, int numeroPines, String encapsulado) {
         super(sku, nombre, especificacion, stockMinimo);
         this.encapsulado = encapsulado;
         this.numeroPines = numeroPines;
     }
 
-    @Override
+    @Override //Clase hija, reemplaza el método abstracto de la clase padre Producto
     public String mostrarDetalle() {
         return String.format("[CIRCUITO INTEGRADO] SKU: %s | Nombre: %s | Encapsulado: %s | Pines: %d | Espec: %s",
                 getSku(), getNombre(), encapsulado, numeroPines, getEspecificacion());
